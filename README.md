@@ -59,7 +59,7 @@ Pembuatan aplikasi ini memakan waktu -+ 5 hari dengan debugging.
 
 1.clone repository git
 ```sh
-git clone 
+git clone https://github.com/Gen0z/ITSec
 ```
 
 2.XAMPP installation:
