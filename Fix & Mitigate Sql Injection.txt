@@ -1,0 +1,19 @@
+Fixing or mitigating SQL injection vulnerabilities requires understanding how they occur and implementing preventive measures.
+
+This is some tricks and tips:
+
+1. Use Parameterized Queries: Instead of dynamically constructing SQL queries by concatenating strings, use parameterized queries where user input is treated as data rather than executable code. Most modern programming languages and database frameworks support parameterized queries.
+
+2. Input Validation: Validate and sanitize user inputs to ensure they adhere to expected formats and lengths. For instance, if a numeric input is expected, ensure it's indeed a number before using it in a query.
+
+3. Escaping Special Characters: If you can't use parameterized queries, escape special characters (such as quotes, semicolons, and dashes) in user inputs before including them in SQL queries. This prevents malicious input from being interpreted as SQL commands.
+
+4. Least Privilege Principle: Ensure that database accounts used by your application have only the necessary permissions required for their specific tasks. Avoid using accounts with administrative privileges for routine operations.
+
+5. Regular Updates and Patching: Keep your database software and application frameworks up to date with the latest security patches. Vendors frequently release patches to address known vulnerabilities.
+
+6. Limit Error Messages: Avoid providing detailed error messages to users in production environments. Generic error messages can prevent attackers from gaining insights into the database structure or the nature of the vulnerability.
+
+7. Security Testing: Regularly perform security testing, including penetration testing and code reviews, to identify and address vulnerabilities proactively.
+
+8. Educate Developers: Train developers on secure coding practices, especially regarding SQL injection vulnerabilities. Encourage them to follow best practices and use secure coding libraries and frameworks.
